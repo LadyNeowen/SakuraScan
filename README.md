@@ -54,3 +54,20 @@ A User Interface with a file uploader widget. The user should have the capacity 
 A table with the image name and prediction results, and a download button to download the table.
 A page indicating your project hypothesis and how you validated it across the project.
 A technical page displaying your model performance.
+
+
+
+
+Dataset build
+https://www.geeksforgeeks.org/data-science/how-to-create-a-dataset/?utm_source=chatgpt.com
+
+https://unidata.pro/blog/how-to-prepare-ml-dataset/?utm_source=chatgpt.com
+
+https://github.com/karan3691/dataset-builder/blob/master/dataset_builder/dataset/dataset_builder.py
+
+https://stackoverflow.com/questions/56848253/scikit-learn-loading-images-from-folder-to-create-a-labelled-dataset-for-knn-cl?utm_source=chatgpt.com
+
+
+Jupyter notebook workflow for image classification with dataset preparation and training
+
+https://github.com/aws-samples/aws-sar-sagemaker-image-classification/blob/master/jupyter-notebook/image-classification-example.ipynb?utm_source=chatgpt.com

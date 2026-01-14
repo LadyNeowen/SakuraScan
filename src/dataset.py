@@ -1,6 +1,7 @@
 from pathlib import Path
 from PIL import Image
-from typing import List, Tuple
+from typing import List, Tuple, Optional
+import random
 
 
 class SakuraDataset:
@@ -65,3 +66,39 @@ class SakuraDataset:
         img_path, label_index = self.samples[index]
         image = Image.open(img_path).convert('RGB')
         return image, label_index
+
+
+import random
+from typing import List, Tuple, Optional
+
+def train_val_split(
+    dataset: SakuraDataset,
+    val_ratio: float = 0.2,
+    shuffle: bool = True,
+    seed: Optional[int] = None
+    
+) -> Tuple[List[int], List[int]]:
+    
+    """
+    Split dataset indices into training and validation sets.
+    Args:
+        dataset: The SakuraDataset instance to split.
+        val_ratio: Proportion of the dataset to use for validation.
+        shuffle: Whether to shuffle the dataset before splitting.
+        seed: Optional random seed for reproducibility.
+    Returns:
+        A tuple (train_indices, val_indices). where each is a list of indices.
+    """
+    num_samples = len(dataset)
+    indices = list(range(num_samples))
+    
+    if shuffle:
+        rng = random.Random(seed)
+        rng.shuffle(indices)
+        
+    split_point = int(num_samples * (1.0 - val_ratio))
+    train_indices = indices[:split_point]
+    val_indices = indices[split_point:]
+    
+    return train_indices, val_indices
+    
