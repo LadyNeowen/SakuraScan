@@ -71,3 +71,17 @@ https://stackoverflow.com/questions/56848253/scikit-learn-loading-images-from-fo
 Jupyter notebook workflow for image classification with dataset preparation and training
 
 https://github.com/aws-samples/aws-sar-sagemaker-image-classification/blob/master/jupyter-notebook/image-classification-example.ipynb?utm_source=chatgpt.com
+
+
+Modelling training with PyTorch 
+
+https://docs.pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
+
+https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+
+https://docs.pytorch.org/docs/stable/index.html
+
+https://docs.pytorch.org/vision/stable/models.html
+
+https://github.com/pytorch/examples/tree/main/imagenet
+
