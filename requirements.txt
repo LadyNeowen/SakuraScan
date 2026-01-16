@@ -4,3 +4,4 @@ pillow
 jupyter
 torch
 torchvision
+streamlit

@@ -85,3 +85,15 @@ https://docs.pytorch.org/vision/stable/models.html
 
 https://github.com/pytorch/examples/tree/main/imagenet
 
+
+Streamlit information, file uploader API documentation and multipage apps
+
+https://docs.streamlit.io/develop/api-reference/widgets/st.file_uploader?utm_source=chatgpt.com
+
+https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_resource?utm_source=chatgpt.com
+
+https://docs.streamlit.io/develop/concepts/multipage-apps?utm_source=chatgpt.com
+
+
+
+
