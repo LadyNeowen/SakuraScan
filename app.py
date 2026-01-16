@@ -7,7 +7,9 @@ import streamlit as st
 st.set_page_config(
     page_title='SakuraScan Dashboard',
     page_icon='🌸',
+    layout='centered',
 )
 
-st.title('🌸 SakuraScan Dashboard')
+st.title('🌸 SakuraScan')
+st.subheader('Cherry Leaf Health Monitoring')
 st.write('Welcome to the SakuraScan application! Use the sidebar to navigate between pages.')
