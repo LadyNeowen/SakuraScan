@@ -29,6 +29,15 @@ def run():
     st.title('SakuraScan - Leaf Health Prediction')
     st.write('Upload an image of a cherry leaf to classify it.')
     
+    # Confidence treshhold slider
+    confidence_threshold = st.slider(
+        'Confidence Threshold',
+        min_value=0.50,
+        max_value=1.0,
+        value=0.80,
+        step=0.01
+    )
+    
     model, class_names, image_size, device = load_app_model()
     file = st.file_uploader('Upload leaf image', type=['jpg', 'jpeg', 'png'])
     if file:
@@ -40,8 +49,15 @@ def run():
                 pred, conf = predict_image(model, image, class_names, device, image_size)
                 
             st.subheader('Prediction')
-            st.write(f'**Class:** {pred}')
             st.write(f'**Confidence:** {conf:.2%}')
+            
+            if conf >= confidence_threshold:
+                st.write(f'**Predicted Class:** {pred}')
+            else:
+                st.warning(
+                    'The model is not confident enough to make a prediction.'
+                    f' (threshold: {confidence_threshold:.0%})'
+                )
             
 if __name__ == '__main__':
     run()
