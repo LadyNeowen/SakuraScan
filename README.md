@@ -94,6 +94,8 @@ https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_resou
 
 https://docs.streamlit.io/develop/concepts/multipage-apps?utm_source=chatgpt.com
 
+https://docs.streamlit.io/develop/api-reference/widgets/st.slider
+
 
 
 
