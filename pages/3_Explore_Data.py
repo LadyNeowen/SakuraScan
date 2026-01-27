@@ -41,6 +41,15 @@ def run() -> None:
     st.subheader('Images per class')
     for cls, n in counts.items():
         st.write(f'- **{cls}**: {n} images')
+        
+    st.markdown("""
+    ### Conclusions
+    The dataset shows a relatively balanced distribution between healthy and infected leaves.
+    This reduces the risk of model bias during training and supports reliable classification.
+    
+    Visual inspection of sample images confirms that powdery mildew presents visible texture
+    and colour differences compared to healthy leaves.
+    """)
     
     if sum(counts.values()) == 0:
         st.error('No images found in the dataset folders.')

@@ -29,6 +29,13 @@ def run() -> None:
     Streamlit UI for leaf health prediction
     """
     st.title('SakuraScan - Leaf Health Prediction')
+    st.info("""
+    Model Performance Summary:
+    
+    The current model achieved approximately 95% validation accuracy on the test dataset.
+    This indicates strong performance in classifying cherry leaf health conditions.
+    However, real-world performance may vary based on image quality and environmental factors.        
+    """)
     st.write('Upload an image of a cherry leaf to classify it.')
     
     # Confidence threshold slider
@@ -101,7 +108,16 @@ def run() -> None:
         st.altair_chart(chart, use_container_width=True)
     else:
         st.info('Upload an image and run prediction to see results.')
-
+        
+        st.markdown("""
+        ### How to Interpret the Prediction
+        
+        The confidence score respresents the model's estimates of how likely the predicted class is correct.
+        
+        Predictions above the selected threshold are considered reliable.
+        Lower confidence values indicate uncertainty and should be interpreted with caution,
+        potentially requiring manual inspection.
+        """)
 
 if __name__ == '__main__':
     run()
