@@ -16,7 +16,14 @@ def list_images(folder: Path):
     
     if not folder.exists():
         return []
-    return [p for p in folder.iterdir() if p.suffix.lower() in VALID_EXTENSIONS]
+    
+    return [
+        p for p in folder.iterdir()
+        if p.is_file() and p.suffix.lower() in VALID_EXTENSIONS
+    
+    ]
+
+
 
 
 def run() -> None:
@@ -28,11 +35,14 @@ def run() -> None:
     st.write('Browse through sample images from the Sakura dataset.')
     
     project_root = Path(__file__).resolve().parent.parent
-    base = project_root / 'data' / 'source_images'
     
-    st.caption(f"DEBUG base: {base} | exists={base.exists()}")
-    st.caption(f"DEBUG healthy: {(base / 'healthy')} | exists={(base / 'healthy').exists()}")
-    st.caption(f"DEBUG mildew: {(base / 'powdery_mildew')} | exists={(base / 'powdery_mildew').exists()}")
+    base_full = project_root / 'data' / 'source_images'
+    base_sample = project_root / 'data_sample' / 'source_images'
+    
+    base = base_full if base_full.exists() else base_sample
+    
+    if base == base_sample:
+        st.info('Showing a small sample dataset in the deployed app. Full dataset is available locally.')
 
     
     dirs = {
