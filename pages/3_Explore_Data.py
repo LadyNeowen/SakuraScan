@@ -30,6 +30,11 @@ def run() -> None:
     project_root = Path(__file__).resolve().parent.parent
     base = project_root / 'data' / 'source_images'
     
+    st.caption(f"DEBUG base: {base} | exists={base.exists()}")
+    st.caption(f"DEBUG healthy: {(base / 'healthy')} | exists={(base / 'healthy').exists()}")
+    st.caption(f"DEBUG mildew: {(base / 'powdery_mildew')} | exists={(base / 'powdery_mildew').exists()}")
+
+    
     dirs = {
         'Healthy Leaves': base / 'healthy',
         'Powdery Mildew': base / 'powdery_mildew',
