@@ -42,7 +42,9 @@ def run() -> None:
     base = base_full if base_full.exists() else base_sample
     
     if base == base_sample:
-        st.info('Showing a small sample dataset in the deployed app. Full dataset is available locally.')
+        st.info('This deployed app shows a small representative sample of the dataset to keep the Heroku build lightweight.\n'
+                'The full dataset is used locally for EDA and model training.'
+        )
 
     
     dirs = {
