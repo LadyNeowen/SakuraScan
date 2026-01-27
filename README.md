@@ -128,13 +128,13 @@ Exploratory Data Analysis (EDA) was conducted to:
 
 The application is built using Streamlit and structured for deployment with:
 
-* Procfile (Upcoming)
+* Procfile
 
 * requirements.txt
 
-* runtime.txt (Upcoming)
+* runtime.txt
 
-* setup.sh (Upcoming)
+* setup.sh
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
