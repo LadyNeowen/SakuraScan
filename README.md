@@ -166,6 +166,9 @@ Exploratory Data Analysis (EDA) was conducted to:
 
 * Model persistence and reuse in Streamlit inference pipeline
 
+* Deployment optimization supported by AI-assisted code refinement
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Future Work
@@ -208,6 +211,9 @@ The application was manually tested locally and on the deployed Heroku version.
 * Verified class counts display correctly
 * Tested random and indexed image selection
 * Confirmed graceful handling when dataset is unavailable in deployment
+* Note: The deployed Heroku version includes a small reoresentative sample of images for dataset browsing.
+  The full dataset is used locally in the EDA and modelling notebooks.
+  This approach keeps the deployment lightweight and improves startup performance.
 
 **Leaf Health Prediction**
 * Tested image upload and rendering
@@ -300,5 +306,7 @@ to open-source data for machine learning research.
 * Docstrings
 * Assistance with README file
 * Aid in finding the right information on the web
+* Assistance in developing and debugging image optimization and resizing scripts for deployment efficiency
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
