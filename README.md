@@ -126,17 +126,60 @@ Exploratory Data Analysis (EDA) was conducted to:
 
 ## Deployment
 
-The application is built using Streamlit and structured for deployment with:
+The application is deployed using Heroku and configured for CPU-only execution.
 
-* Procfile
+Deployment setup includes:
+* Custom Procfile for Streamlit
+* Python version specification via .python-version
+* setup.sh for Streamlit server configuration
+* requirements.txt with PyTorch CPU wheels
 
-* requirements.txt
+The deployed application can be accessed via the Heroku app URL.
+https://sakurascan-0268a4143e07.herokuapp.com/
 
-* runtime.txt
+Note: Due to the use of PyTorch, the deployment package size is relatively large, which may result in slightly longer startup times.
 
-* setup.sh
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+## Testing (Manual Bug Check)
+
+The application was manually tested locally and on the deployed Heroku version.
+
+### Smoke Test
+* Verified that all required packages import correctly in the project virtual environment
+* Confirmed Streamlit starts without runtime errors
+
+### Functional Testing
+**Explore Dataset**
+* Verified class counts display correctly
+* Tested random and indexed image selection
+* Confirmed graceful handling when dataset is unavailable in deployment
+
+**Leaf Health Prediction**
+* Tested image upload and rendering
+* Verified inference runs successfully and displays predicted class and confidence
+* Confirmed threshold behaviour and confidence visualisation
+* Verified session state resets when a new image is uploaded
+
+### Deployment Testing (Heroku)
+* Confirmed the deployed app loads successfully
+* Verified inference page works in production environment
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+## Known Issues and Fixes
+
+During development, several issues were identified and resolved, including:
+
+- Environment setup conflicts on Windows PowerShell
+- Dependency installation issues on Heroku
+- Large slug size caused by GPU-related packages
+- Model loading and path resolution errors
+
+All identified issues were resolved before deployment.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 ## References and Acknowledgements
 

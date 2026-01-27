@@ -27,7 +27,7 @@ def run() -> None:
     st.title('SakuraScan - Explore Dataset')
     st.write('Browse through sample images from the Sakura dataset.')
     
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parent.parent
     base = project_root / 'data' / 'source_images'
     
     dirs = {
