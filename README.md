@@ -5,6 +5,50 @@ SakuraScan is a predictive analytics application developed for Farmy & Foods to 
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+## Application Preview
+
+### Responsive app/home page
+![Home Page with responsiveness](assets/screenshots/responsive.jpg)
+
+This page provides an overview of the application
+and adapts to different screen sizes for accessibility.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+### Leaf Inference
+![Leaf Inference](assets/screenshots/health.jpg)
+
+Users can upload an image of a cherry leaf
+and receive a real-time classification
+using the trained deep learning model.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+### Model Validation Performance
+![Validation Performance](assets/screenshots/validation-performance.jpg)
+
+This section presents the model’s validation performance,
+demonstrating accuracy, stability, and reliability
+on unseen data.
+
+
+### Prediction Page
+![Prediction](assets/screenshots/prediction.jpg)
+
+The prediction page displays the final classification result
+along with a confidence score to support decision-making.
+
+
+
+### Explore Dataset
+![Explore Dataset](assets/screenshots/explore.jpg)
+
+This page enables visual inspection of the dataset,
+including class distribution and representative samples.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## Business Understanding (CRISP-DM)
 
 Cherry plantations operated by Farmy & Foods are affected by powdery mildew, a fungal disease that reduces crop quality. The current manual inspection process is time-consuming and not scalable across thousands of trees.
@@ -124,6 +168,15 @@ Exploratory Data Analysis (EDA) was conducted to:
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
+## Future Work
+
+* Expand dataset with more environmental variation
+* Support multi-class disease classification
+* Integrate mobile camera capture
+* Retrain model periodically with new data
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## Deployment
 
 The application is deployed using Heroku and configured for CPU-only execution.
@@ -172,10 +225,10 @@ The application was manually tested locally and on the deployed Heroku version.
 
 During development, several issues were identified and resolved, including:
 
-- Environment setup conflicts on Windows PowerShell
-- Dependency installation issues on Heroku
-- Large slug size caused by GPU-related packages
-- Model loading and path resolution errors
+* Environment setup conflicts on Windows PowerShell
+* Dependency installation issues on Heroku
+* Large slug size caused by GPU-related packages
+* Model loading and path resolution errors
 
 All identified issues were resolved before deployment.
 
@@ -185,50 +238,56 @@ All identified issues were resolved before deployment.
 
 This project was developed using a combination of course materials, official documentation, and external technical resources. The following sources supported different stages of the project:
 
+### Dataset images
+The image dataset used in this project was obtained from Kaggle
+and is used strictly for educational purposes.
+We thank the original dataset creators for contributing
+to open-source data for machine learning research.
+
 ### Dataset Preparation
-- GeeksforGeeks: How to Create a Dataset  
+* GeeksforGeeks: How to Create a Dataset  
   https://www.geeksforgeeks.org/data-science/how-to-create-a-dataset/
 
-- Unidata: How to Prepare an ML Dataset  
+* Unidata: How to Prepare an ML Dataset  
   https://unidata.pro/blog/how-to-prepare-ml-dataset/
 
-- Dataset Builder (GitHub)  
+* Dataset Builder (GitHub)  
   https://github.com/karan3691/dataset-builder
 
-- Stack Overflow: Loading Images from Folders  
+* Stack Overflow: Loading Images from Folders  
   https://stackoverflow.com/questions/56848253/
 
 ### Jupyter Notebook Workflow
-- AWS Sample Image Classification Notebook  
+* AWS Sample Image Classification Notebook  
   https://github.com/aws-samples/aws-sar-sagemaker-image-classification
 
 ### Model Training with PyTorch
-- PyTorch CIFAR-10 Tutorial  
+* PyTorch CIFAR-10 Tutorial  
   https://docs.pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
 
-- PyTorch Transfer Learning Tutorial  
+* PyTorch Transfer Learning Tutorial  
   https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 
-- PyTorch Documentation  
+* PyTorch Documentation  
   https://docs.pytorch.org/docs/stable/index.html
 
-- Torchvision Models  
+* Torchvision Models  
   https://docs.pytorch.org/vision/stable/models.html
 
-- PyTorch ImageNet Examples  
+* PyTorch ImageNet Examples  
   https://github.com/pytorch/examples/tree/main/imagenet
 
 ### Streamlit Development
-- File Uploader API  
+* File Uploader API  
   https://docs.streamlit.io/develop/api-reference/widgets/st.file_uploader
 
-- Caching and State  
+* Caching and State  
   https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_resource
 
-- Multipage Applications  
+* Multipage Applications  
   https://docs.streamlit.io/develop/concepts/multipage-apps
 
-- Slider Widget  
+* Slider Widget  
   https://docs.streamlit.io/develop/api-reference/widgets/st.slider
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
